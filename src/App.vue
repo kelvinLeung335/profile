@@ -7,32 +7,24 @@ import 'aos/dist/aos.css';
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap";
 
-
-const scrolltop = (caseName)=>{
+const scrollTo = function(caseName:any){
   $('html, body').animate({
       // scrollTop: $(".connection-wrap").offset().top
       scrollTop: $(caseName).offset().top
   }, 300);
 }
-// function scrollTop(casename){
-//   $('html, body').animate({
-//       // scrollTop: $(".connection-wrap").offset().top
-//       scrollTop: $(casename).offset().top
-//   }, 300);
-// }
-
 
 AOS.init();
 </script>
 <template>
-<div class="wrap">
+<div class="wrap overflow-hidden">
   <nav aria-label="breadcrumb" class="breadcrumbNav lead">
   <ol class="breadcrumb text-center justify-content-center ">
-    <li class="breadcrumb-item"><a href="#" @click="scrolltop('.header')" class="text-decoration-none">Home</a></li>
-    <li class="breadcrumb-item"><a href="#" @click="scrolltop('.exp')" class="text-decoration-none">Experience</a></li>
-    <li class="breadcrumb-item"><a href="#" @click="scrolltop('.skill')" class="text-decoration-none">Skill</a></li>
-    <li class="breadcrumb-item"><a href="#" @click="scrolltop('.edu-content')" class="text-decoration-none">Education</a></li>
-    <li class="breadcrumb-item"><a href="#" @click="scrolltop('.connection-wrap')" class="text-decoration-none">Contact</a></li>
+    <li class="breadcrumb-item"><a href="#" @click="scrollTo('.header')" class="text-decoration-none">Home</a></li>
+    <li class="breadcrumb-item"><a href="#" @click="scrollTo('.exp')" class="text-decoration-none">Experience</a></li>
+    <li class="breadcrumb-item"><a href="#" @click="scrollTo('.skill')" class="text-decoration-none">Skill</a></li>
+    <li class="breadcrumb-item"><a href="#" @click="scrollTo('.edu-content')" class="text-decoration-none">Education</a></li>
+    <li class="breadcrumb-item"><a href="#" @click="scrollTo('.connection-wrap')" class="text-decoration-none">Contact</a></li>
   </ol>
 </nav>
   <div class="header">
@@ -150,8 +142,8 @@ AOS.init();
   </div>  
 
   <div class="skill mt-5 mb-5" >
-          <div class="skill-back w-100 mt-5"  data-aos="fade-down-left" data-aos-duration="2000" data-aos-easing="ease-out-cubic">
-            <div class="skill-content">
+          <div class="skill-back w-100 mt-5" >
+            <div class="skill-content" data-aos="fade-down-left" data-aos-duration="2000" data-aos-easing="ease-out-cubic">
             <div class="row">
               <div class="col-12">
                 <h1 class="text-center">Skill</h1>
